@@ -10,7 +10,6 @@
     <style>
     body {
         margin: 0px;
-        padding: 0px;
         font-family: 'Source Sans Pro', sans-serif, "微軟正黑體";
         font-size: 12pt;
         font-weight: 200;
@@ -23,6 +22,12 @@
         font-size: 80pt;
     }
     
+    h2 {
+        margin: 5px;
+        padding: 0px;
+        font-size: 40pt;
+    }
+    
     .container {
         width: 1200px;
         margin: 0px auto;
@@ -30,28 +35,45 @@
     }
     
     .column1 {
-    	overflow: auto;
-    	float: left;
+        overflow: auto;
+        float: left;
         width: 598px;
-        margin: 0px 0px 0px 0px ;
+        margin: 80px 0px 0px 0px;
         border: 1px groove;
     }
-
+    
     .column2 {
-    	overflow: auto;
-    	float: right;
+        overflow: auto;
+        float: right;
         width: 598px;
-        margin: 0px 0px 0px 0px ;
+        margin: 80px 0px 00px 0px;
         border: 1px groove;
     }
     
     #logo {
         text-align: center;
+        padding: 80px 0px 80px 0px;
+    }
+    
+    #content {
+        text-align: center;
+        padding: 40px 0px 0px 0px;
+    }
+    
+    #button a {
+        width: 300px;
+        height: 80px;
+        font-weight: bold;
+        border-radius: 10px;
+        background-color: black;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
     }
     
     #menu ul {
         margin: 0;
-        padding: 5px 0px 5px 0px;
+        padding: 30px 0px 30px 0px;
         list-style: none;
         font-size: 16pt;
         line-height: normal;
@@ -62,9 +84,10 @@
         display: inline-block;
     }
     
-    #menu a {
+    #menu li a {
+        border-radius: 10px;
         display: block;
-        padding: 1.5em 1em;
+        padding: 0.5em 1em;
         letter-spacing: 1px;
         text-decoration: none;
         text-transform: uppercase;
@@ -73,34 +96,35 @@
         color: #FFF;
     }
     
+    #menu li a:hover {
+        background: black;
+    }
+    
     #header {
         background: #3f3f3f;
     }
-
+    
     #end {
         background: #333;
-        color:	#E0E0E0;        
+        color: #E0E0E0;
         font-size: 24pt;
         font-weight: 700;
         text-align: center;
         padding: 5px 0px 5px 0px;
     }
-    ul.contact
-	{
-		overflow:  hidden;
-		margin: 0em 0 0em 0;
-		padding-top: 0em;
-		text-align: center;
-	}
-	ul.contact li
-	{
-		display: inline-block;
-		padding: 0em 0.30em;
-		font-size: 1em;
-	}
-	
-	
-	
+    
+    ul.contact {
+        overflow: hidden;
+        margin: 0em 0 0em 0;
+        padding-top: 0em;
+        text-align: center;
+    }
+    
+    ul.contact li {
+        display: inline-block;
+        padding: 0em 0.30em;
+        font-size: 1em;
+    }
     </style>
 </head>
 
@@ -134,28 +158,32 @@
     </div>
     <!--Logo-->
     <div id="logo" class="container">
-    
-        <h1><img src="img/sleeping.png" width="200" height="200" align="center">懶人『包』 <br><small>#當懶人遇上工具人</small></h1>
+        <h1><img src="img/sleeping.png" width="200" height="200" align="center">懶人『包』 </h1>
     </div>
     <!--主介面-->
-    <div class="container">
-    	<div>
-    		<h2>介紹網站</h2>
-    		<p>巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</p>
-    	</div>
+    <div id="content" class="container">
+        <div>
+            <h2>當懶人遇上工具人→一拍即合<br>你出運費我跑腿，LazyHelp給你們交易平台<br>&nbsp;</h2>
+        </div>
         <div class="column1">
-            <img src="img/lazyman.png" style="width:200px;height:200px">
-            <div class="title">
-                <h2>我是懶人</h2>
+            <img src="img/lazyman.png" style="width:200px;height:200px " align="left">
+            <div id="button">
+                <br>
+                <br>
+                <br>
+                <a href="#"><h2>我是懶人</h2></a>
             </div>
         </div>
         <div class="column2">
-            <img src="img/toolman.png" style="width:200px;height:200px">
-            <div class="title">
-                <h2>我是工具人</h2>
+            <img src="img/toolman.png" style="width:200px;height:200px" align="left">
+            <div id="button">
+                <br>
+                <br>
+                <br>
+                <a href="#"><h2>我是工具人</h2></a>
             </div>
         </div>
-        </div>
+    </div>
     </div>
     <!--聯絡方式-->
     <div class="container">
