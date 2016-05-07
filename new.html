@@ -30,34 +30,41 @@
     
     .container {
         width: 1200px;
+        height:auto;
         margin: 0px auto;
-        border: 1px solid;
+        /*border: 1px solid;*/
     }
     
-    .column1 {
+    #column1 {
         overflow: auto;
         float: left;
-        width: 598px;
-        margin: 80px 0px 0px 0px;
-        border: 1px groove;
+        width: 600px;
+        margin: 40px 0px 40px 0px;
+        /*border: 1px groove;*/
     }
     
-    .column2 {
+    #column2 {
         overflow: auto;
         float: right;
-        width: 598px;
-        margin: 80px 0px 00px 0px;
-        border: 1px groove;
+        width: 600px;
+        margin: 40px 0px 40px 0px;
+        /*border: 1px groove;*/
     }
     
     #logo {
         text-align: center;
-        padding: 80px 0px 80px 0px;
+        padding: 10px 0px 40px 0px;
     }
     
-    #content {
+    #content1 {
         text-align: center;
-        padding: 40px 0px 0px 0px;
+        padding: 10px 0px 10px 0px;
+    }
+    #content2 {
+        text-align: center;
+        border: solid 1px;
+        background-color: #bbb; 
+        border-radius: 10px;
     }
     
     #button a {
@@ -108,9 +115,8 @@
         background: #333;
         color: #E0E0E0;
         font-size: 24pt;
-        font-weight: 700;
+        padding: 1px 0px 1px 0px;
         text-align: center;
-        padding: 5px 0px 5px 0px;
     }
     
     ul.contact {
@@ -159,13 +165,15 @@
     <!--Logo-->
     <div id="logo" class="container">
         <h1><img src="img/sleeping.png" width="200" height="200" align="center">懶人『包』 </h1>
+        <br>
+        <hr>
     </div>
     <!--主介面-->
-    <div id="content" class="container">
-        <div>
-            <h2>當懶人遇上工具人→一拍即合<br>你出運費我跑腿，LazyHelp給你們交易平台<br>&nbsp;</h2>
-        </div>
-        <div class="column1">
+    <div id="content1" class="container">
+        <h2>當懶人遇上工具人→一拍即合<br>你出運費我跑腿，LazyHelp給你們交易平台<br>&nbsp;</h2>
+    </div>
+    <div  id="content2" class="container">
+        <div id="column1" class="container">
             <img src="img/lazyman.png" style="width:200px;height:200px " align="left">
             <div id="button">
                 <br>
@@ -174,7 +182,7 @@
                 <a href="#"><h2>我是懶人</h2></a>
             </div>
         </div>
-        <div class="column2">
+        <div id="column2" class="container">
             <img src="img/toolman.png" style="width:200px;height:200px" align="left">
             <div id="button">
                 <br>
@@ -183,21 +191,13 @@
                 <a href="#"><h2>我是工具人</h2></a>
             </div>
         </div>
+         &nbsp;&nbsp;
     </div>
-    </div>
+    <div class="container">&nbsp;<br> &nbsp;</div>
     <!--聯絡方式-->
-    <div class="container">
-        <ul class="contact">
-            <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-            <li><a href="#" class="icon icon-facebook"><span></span></a></li>
-            <li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
-            <li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
-            <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
-        </ul>
-    </div>
     <!--創作團隊-->
-    <div id="end">
-        <p>&copy; 信箱：B10309@mail.ntust.edu.tw 創作團隊：台灣科技大學四資管二</p>
+    <div id="end" >
+        <h3>&copy; 信箱：B10309@mail.ntust.edu.tw 創作團隊：台灣科技大學四資管二</h2>
     </div>
 </body>
 
