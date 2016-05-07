@@ -37,17 +37,25 @@
     
     #column1 {
         overflow: auto;
+        width: 530px;
         float: left;
-        width: 600px;
-        margin: 40px 0px 40px 0px;
+        border: solid 1px;
+        margin: 0px 0px 0px 10px;
+        background-color: #bbb; 
+        border-radius: 10px;
         /*border: 1px groove;*/
     }
     
     #column2 {
+
+        float:right;
         overflow: auto;
-        float: right;
-        width: 600px;
-        margin: 40px 0px 40px 0px;
+        width: 530px;
+
+        margin: 0px 10px 0px 0px;
+        border: solid 1px;
+        background-color: #bbb; 
+        border-radius: 10px;
         /*border: 1px groove;*/
     }
     
@@ -62,9 +70,6 @@
     }
     #content2 {
         text-align: center;
-        border: solid 1px;
-        background-color: #bbb; 
-        border-radius: 10px;
     }
     
     #button a {
@@ -72,9 +77,9 @@
         height: 80px;
         font-weight: bold;
         border-radius: 10px;
-        background-color: black;
+        background-color: white;
         display: inline-block;
-        color: white;
+        color: #222;
         text-decoration: none;
     }
     
@@ -172,27 +177,28 @@
     <div id="content1" class="container">
         <h2>當懶人遇上工具人→一拍即合<br>你出運費我跑腿，LazyHelp給你們交易平台<br>&nbsp;</h2>
     </div>
-    <div  id="content2" class="container">
-        <div id="column1" class="container">
+  <div  id="content2" class="container" style="height: 200px">
+        <span id="column1" class="container">
             <img src="img/lazyman.png" style="width:200px;height:200px " align="left">
-            <div id="button">
+            <span id="button">
                 <br>
                 <br>
                 <br>
                 <a href="#"><h2>我是懶人</h2></a>
-            </div>
-        </div>
-        <div id="column2" class="container">
+            </span>
+        </span>
+        <span id="column2" class="container">
             <img src="img/toolman.png" style="width:200px;height:200px" align="left">
-            <div id="button">
+            <span id="button">
                 <br>
                 <br>
                 <br>
                 <a href="#"><h2>我是工具人</h2></a>
-            </div>
-        </div>
-         &nbsp;&nbsp;
-    </div>
+            </span>
+        </span>
+         &nbsp;<br>&nbsp;
+   </div>
+
     <div class="container">&nbsp;<br> &nbsp;</div>
     <!--聯絡方式-->
     <!--創作團隊-->
