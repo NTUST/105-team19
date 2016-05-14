@@ -47,7 +47,6 @@
         text-transform: uppercase;
         letter-spacing: 3px;
         font-weight: 300;
-        color: #FFF;
     }
     
     a:hover {
@@ -81,7 +80,11 @@
     }
     
     .navbar-inverse {
-        background: rgb(0, 0, 0,);
+        background: linear-gradient(
+                    0deg,
+                    gray 0%,
+                    black 100%                    
+                    );
     }
     
     .carousel-caption h3 {
