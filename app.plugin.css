@@ -1,5 +1,4 @@
-    <style>
-    a {
+    <style> a {
         color: black;
     }
     
@@ -78,13 +77,10 @@
         background: url(img/background2.jpg);
         background-repeat: repeat;
     }
-    
+
+       
     .navbar-inverse {
-        background: linear-gradient(
-                    0deg,
-                    gray 0%,
-                    black 100%                    
-                    );
+        background: linear-gradient( 0deg, gray 0%, black 100%);
     }
     
     .carousel-caption h3 {
@@ -99,24 +95,38 @@
                     <img src="img/logo.png" width="300"> Hide the carousel text when the screen is less than 600 pixels wide */
         }
     }
-
-    #bor{
+    
+    #bor {
         border-style: solid;
-        border-width: 1px;
+        border-width: 5px 2.5px 5px 2.5px;
         height: 220px;
     }
-
+    
     #bor a {
         color: black;
     }
-
-    #bor2{
+    
+    #bor2 {
         border-style: solid;
         border-width: 1px;
         height: 320px;
     }
-
-    #bor2 a {
+    
+    #bor4 a {
         color: black;
     }
+    
+    #bor3 {
+        border-style: solid;
+        border-width: 5px 5px 5px 5px;
+    }
+    
+    #bor4 {
+        border-style: solid;
+        border-width: 0px 5px 0px 0px;
+    }
+    
+
+    
+    
     </style>
