@@ -10,7 +10,6 @@
     <META NAME="Author" CONTENT="Lizen">
     <meta name="description" content="以 C2C 的方式經營互動式網站平台，幫助懶得走路的人跟想賺小錢的人。" />
     <!-- Latest compiled and minified CSS -->
-    
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="app.plugin.css">
     <!-- jQuery library -->
@@ -25,7 +24,7 @@
             <li><a href="bootstrap_signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="bootstrap_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
-        <img src="img/logo2.png"  height="300" >
+        <img src="img/logo2.png" height="300">
         <br>
     </div>
     <nav class="navbar navbar-inverse  " role="navigation">
@@ -36,10 +35,10 @@
                 <div class="col-sm-10">
                     <ul class="nav navbar-nav ">
                         <li class="current_page_item">
-                            <a href="#" accesskey="1" title=""><img src="img/target.png">首頁</a>
+                            <a href="bootstrap_index.html" accesskey="1" title=""><img src="img/target.png">首頁</a>
                         </li>
                         <li>
-                            <a href="#" accesskey="2" title=""><img src="img/membership.png">會員中心
+                            <a href="bootstrap_center.html" accesskey="2" title=""><img src="img/membership.png">會員中心
                             </a>
                         </li>
                         <li>
@@ -64,35 +63,51 @@
         <hr>
     </div>
     主介面-->
-    <div id="bor3" class="container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="img/page2.png" alt="New York">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-10">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/page2.png" alt="New York">
+                        </div>
+                        <div class="item">
+                            <img src="img/page1.png" alt="Chicago">
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="img/page1.png" alt="Chicago">
-                </div>
+            </div>
+            <div class="col-sm-1">
             </div>
         </div>
     </div>
-    <hr>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6" style="line-height:250px;">
-                <img src="img/lazyman.png" width:200px height:200px align="left">
-                <a href="bootstrap_deal_build.html"><h2 style="line-height:250px;color: black;">我是懶人</h2></a>
+        <div class="col-sm-12" style="height: 40px" >
+        </div>
+            <div class="col-sm-2" style="height: 40px" >
+        </div>
+            <div id="bor4" class="col-sm-4">
+                <img src="img/lazyman.png" width="200px" height="200px" align="left" >
+                <a href="bootstrap_deal_build.html"><h3 style="line-height:120px;color: black;">我是懶人</h3></a>
             </div>
-            <div class="col-sm-6" style="line-height:250px;">
-                <img src="img/toolman.png" width:200px height:200px align="left">
-                <a href="bootstrap_deal.html"><h2 style="line-height:250px;color: black;">我是工具人</h2></a>
+           
+            <div class="col-sm-4">
+                 <img src="img/toolman.png" width="200px" height="200px" align="left" >
+                <a href="bootstrap_deal.html"><h3 style="line-height:120px;color: black;">我是工具人</h3></a>
             </div>
+            <div class="col-sm-2" style="height: 40px" >
+        </div>
+        </div>
+         <div class="col-sm-12" style="height: 40px" >
         </div>
     </div <!--聯絡方式-->
     <!--創作團隊-->

@@ -26,8 +26,9 @@
     
     .navbar ul {
         margin: 0;
+        padding: 0px;
         list-style: none;
-        font-size: 18pt;
+        font-size: 18px;
         text-align: center;
         line-height: normal;
         text-align: center;
@@ -41,7 +42,7 @@
     
     .navbar li a {
         display: block;
-        padding: 20px 25px 20px 25px;
+        padding: 10px 25px 10px 25px;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 3px;
