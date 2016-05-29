@@ -6,8 +6,10 @@
         font-family: 'Source Sans Pro', sans-serif, "微軟正黑體";
         text-align: center;
         color: #5B5B5B;
+        background-color: white;
+        /*
         background-repeat: repeat;
-        background-image: url(img/background3.jpg);
+        background-image: url(img/background3.jpg);*/
     }
     
     h1 {
@@ -21,12 +23,20 @@
         padding: 0px;
         font-size: 300%;
     }
+
+    #text a{
+        color: #E0E0E0;
+        font-size: 120%;
+    }
     
+    #text li{
+        padding: 5px 0px 5px 0px;
+    }
     .navbar {}
     
     .navbar ul {
         margin: 0;
-        padding: 0px;
+        padding: 10px 0px 10px 0px;
         list-style: none;
         font-size: 18px;
         text-align: center;
@@ -35,20 +45,23 @@
     }
     
     .navbar li {
-        border-color: white;
-        border-style: solid;
-        border-width: 0px 1px;
+       
     }
     
     .navbar li a {
+         border-color: white;
+        border-style: solid;
+        border-width: 0px 1px;
         display: block;
-        padding: 10px 25px 10px 25px;
+        padding: 15px 10px 15px 10px;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 3px;
         font-weight: 300;
     }
-    
+    a{
+        color:black;
+    }
     a:hover {
         text-decoration: none;
     }
@@ -61,8 +74,18 @@
         /* Set width to 100% */
         margin: auto;
     }
-    
-    #footer {
+    #footer1 {
+        display: block;
+        width: 100%;
+        background: linear-gradient( 0deg, #666 0%, #222 100%);
+        color: #E0E0E0;
+        position: relative;
+        line-height: 1px;
+        color: #0;
+        padding: 1px 0px 1px 0px;
+        text-align: center;
+    }
+    #footer2 {
         display: block;
         width: 100%;
         background: #333;
@@ -75,8 +98,12 @@
     }
     
     #top {
+        background: linear-gradient( 0deg, #888 0%, #555 100%);
+        /*
+        background-color:   #C0C0C0;
+        /*
         background: url(img/background2.jpg);
-        background-repeat: repeat;
+        background-repeat: repeat;*/
     }
 
        
