@@ -1,0 +1,167 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>懶人，包</title>
+    <meta name="keywords" content="代買'代購'懶人'賺小錢" />
+    <META NAME="Author" CONTENT="Lizen">
+    <meta name="description" content="以 C2C 的方式經營互動式網站平台，幫助懶得走路的人跟想賺小錢的人。" />
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.plugin.css'%}"/>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="top" class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="bootstrap_signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="bootstrap_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        <img src="{% static 'img/logo2.png'%}" height="300" class="img-responsive center-block">
+        <br>
+    </div>
+    <nav class="navbar navbar-inverse  " role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-xs-0">
+                </div>
+                <div class="col-md-10 col-xs-12">
+                    <ul class="nav navbar-nav ">
+                        <li>
+                            <img src="{% static 'img/logo.png'%}" height="60">
+                        </li>
+                        <li style="width: 40px">
+                            &nbsp;
+                        </li>
+                        <li class="current_page_item">
+                            <a href="index" accesskey="1" title=""><img src = "{% static 'img/target.png'%}" alt = "test"/>首頁</a>
+                        </li>
+                        <li>
+                            <a href="center" accesskey="2" title=""><img src="{% static 'img/membership.png'%}"/>會員中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="deal" accesskey="3" title=""><img src="{% static 'img/map.png'%}">交易專區</a>
+                        </li>
+                        <li>
+                            <a href="dispute" accesskey="4" title=""><img src="{% static 'img/center.png'%}">客服中心</a>
+                        </li>
+                        <li>
+                            <a href="ad" accesskey="5" title=""><img src="{% static 'img/ad.png'%}">刊登廣告</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1 col-xs-0">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Logo
+    <div id="logo" class="container">
+        
+        <hr>
+    </div>
+    主介面-->   <div class="container">
+        <div class="row">
+          <div class="col-sm-4  col-xs-12">
+                    <div class="panel panel-default  ">
+                        <div class="panel-heading"><span class="label label-default">買賣糾紛意見反映</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-info ">交易糾紛多因誤會產生，</li>
+                                <li class="list-group-item  list-group-item-info">參見糾紛與棄標常見問題。</li>
+                                <li class="list-group-item  list-group-item-info">若要申訴商品違規事項，</li>
+                                <li class="list-group-item  list-group-item-info">請由商品違規反映信箱來信。</li>
+                                <li class="list-group-item"><span class="badge">Email</span>B10309009@mail.ntust.edu.tw</li>
+                            </ul>
+                        </div>
+                    </div>
+              
+            </div>
+            <div class="col-sm-4  col-xs-12">
+                    <div class="panel panel-default  ">
+                        <div class="panel-heading"><span class="label label-default">賣家功能</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-warning">賣家功能有問題嗎？</li>
+                                <li class="list-group-item list-group-item-warning">是否是刊登商品問題？</li>
+                                <li class="list-group-item list-group-item-warning">是否是結帳問題呢？</li>
+                                <li class="list-group-item list-group-item-warning">賣家功能異常信箱來信</li>
+                                <li class="list-group-item"><span class="badge">Email</span>B10309009@mail.ntust.edu.tw</li>
+                            </ul>
+                        </div>
+                    </div>
+              
+            </div>
+            <div class="col-sm-4  col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><span class="label label-default">買家功能</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-danger">買家功能有問題嗎？</li>
+                                <li class="list-group-item list-group-item-danger">是否是註冊程序問題？</li>
+                                <li class="list-group-item list-group-item-danger">是否是購物問題呢？</li>
+                                <li class="list-group-item list-group-item-danger">買家功能異常信箱來信</li>
+                                <li class="list-group-item"><span class="badge">Email</span>B10309009@mail.ntust.edu.tw</li>
+                            </ul>
+                        </div>
+                    </div>
+           
+            </div>
+        </div <!--聯絡方式-->
+    <!--創作團隊-->
+    <div id="footer1" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" style="height: 70px"></div>
+                <div class="col-sm-5"> <img src="{% static 'img/logo3.png'%}" class="img-responsive center-block"></div>
+                <div id="text" class="col-sm-3">
+                    <ul class="nav nav-stacked">
+                        <li class="current_page_item">
+                            <a href="index">回到首頁</a>
+                        </li>
+                        <li>
+                            <a href="center">會員中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="deal">交易專區</a>
+                        </li>
+                        <li>
+                            <a href="dispute">客服中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="text" class="col-sm-3">
+                    <ul class="nav nav-stacked">
+                        <li>
+                            <a href="ad">刊登廣告</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/lazyhelpwebsite">粉絲專頁</a>
+                        </li>
+                        <li>
+                            <a href="deal_build">我要建單</a>
+                        </li>
+                        <li>
+                            <a href="deal">我要接單</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12" style="height: 70px"></div>
+            </div>
+        </div>
+        <div id="footer2" class="col-sm-12">
+            <h3>&copy; 信箱：B10309009@mail.ntust.edu.tw 作者：台灣科技大學四資管二張力仁</h2> </div>
+    </div>
+        </body>
+        </html>

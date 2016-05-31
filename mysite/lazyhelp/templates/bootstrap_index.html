@@ -1,0 +1,185 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>懶人，包</title>
+    <meta name="keywords" content="代買'代購'懶人'賺小錢" />
+    <META NAME="Author" CONTENT="Lizen">
+    <meta name="description" content="以 C2C 的方式經營互動式網站平台，幫助懶得走路的人跟想賺小錢的人。" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.plugin.css'%}" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="top" class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="bootstrap_signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="bootstrap_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        <img src="{% static 'img/logo2.png'%}" height="300" class="img-responsive center-block">
+        <br>
+    </div>
+    <nav class="navbar navbar-inverse  " role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-xs-0">
+                </div>
+                <div class="col-md-10 col-xs-12">
+                    <ul class="nav navbar-nav ">
+                        <li>
+                            <img src="{% static 'img/logo.png'%}" height="60">
+                        </li>
+                        <li style="width: 40px">
+                            &nbsp;
+                        </li>
+                        <li class="current_page_item">
+                            <a href="index" accesskey="1" title=""><img src="{% static 'img/target.png'%}" alt="test" />首頁</a>
+                        </li>
+                        <li>
+                            <a href="center" accesskey="2" title=""><img src="{% static 'img/membership.png'%}" />會員中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="deal" accesskey="3" title=""><img src="{% static 'img/map.png'%}">交易專區</a>
+                        </li>
+                        <li>
+                            <a href="dispute" accesskey="4" title=""><img src="{% static 'img/center.png'%}">客服中心</a>
+                        </li>
+                        <li>
+                            <a href="ad" accesskey="5" title=""><img src="{% static 'img/ad.png'%}">刊登廣告</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1 col-xs-0">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Logo
+    <div id="logo" class="container">
+        
+        <hr>
+    </div>
+    主介面-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-xs-1">
+            </div>
+            <div class="col-sm-10 col-xs-10">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="{% static 'img/page2.png'%}" class="img-responsive center-block" alt="Responsive image">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'img/page1.png'%}" class="img-responsive center-block" alt="Responsive image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1 col-xs-1">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12" style="height: 40px">
+            </div>
+            <div class="col-sm-12">
+                <div class="panel-group">
+                    { % for task in tasks_push %}
+                    <div class="panel panel-default col-sm-4 ">
+                        <div class="panel-heading"><span class="label label-default">已發布的任務</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-warning">{{task.name}}</li>
+                                <li class="list-group-item"><span class="badge">!</span>時間：{{task.time}}</li>
+                                <li class="list-group-item"><span class="badge">$</span>酬勞：$NT{{task.money}}</li>
+                                <li class="list-group-item"><span class="badge">電話</span>(886){{task.phone}}</li>
+                                <li class="list-group-item"><span class="badge">地點</span>(台灣){{task.location}}</li>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.9048631384222!2d121.53971647918854!3d25.01304371432367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa21ad6ecda9%3A0xaafddb5ed18525b6!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5ZyL6Zqb5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1464498094200" width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block">></iframe>
+                            </ul>
+                        </div>
+                    </div>
+                    { % endfor %}
+                </div>
+            </div>
+            <div class="col-sm-12 col-xs-12" style="height: 40px">
+            </div>
+        </div>
+        <div class="col-sm-2 col-xs-0" style="height: 40px">
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="deal_build"><h3 style="line-height:120px;color: black;"> <img src="{% static 'img/lazyman.png'%}" width="200px" height="200px" align="left" class="img-responsive" alt="Responsive image">我是懶人</h3></a>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="deal"><h3 style="line-height:120px;color: black;"><img src="{% static 'img/toolman.png'%}" width="200px" height="200px" align="left" class="img-responsive" alt="Responsive image">我是工具人</h3></a>
+        </div>
+        <div class="col-sm-2 col-xs-0" style="height: 40px">
+        </div>
+    </div>
+    <div class="col-sm-12 col-xs-12" style="height: 40px">
+    </div>
+    </div <!--聯絡方式-->
+    <!--創作團隊-->
+    <div id="footer1" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" style="height: 70px"></div>
+                <div class="col-sm-5"> <img src="{% static 'img/logo3.png'%}" class="img-responsive center-block"></div>
+                <div id="text" class="col-sm-3">
+                    <ul class="nav nav-stacked">
+                        <li class="current_page_item">
+                            <a href="index">回到首頁</a>
+                        </li>
+                        <li>
+                            <a href="center">會員中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="deal">交易專區</a>
+                        </li>
+                        <li>
+                            <a href="dispute">客服中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="text" class="col-sm-3">
+                    <ul class="nav nav-stacked">
+                        <li>
+                            <a href="ad">刊登廣告</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/lazyhelpwebsite">粉絲專頁</a>
+                        </li>
+                        <li>
+                            <a href="deal_build">我要建單</a>
+                        </li>
+                        <li>
+                            <a href="deal">我要接單</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12" style="height: 70px"></div>
+            </div>
+        </div>
+        <div id="footer2" class="col-sm-12">
+            <h3>&copy; 信箱：B10309009@mail.ntust.edu.tw 作者：台灣科技大學四資管二張力仁</h2> </div>
+    </div>
+        </body>
+        </html>

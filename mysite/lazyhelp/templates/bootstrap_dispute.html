@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,9 @@
     <META NAME="Author" CONTENT="Lizen">
     <meta name="description" content="以 C2C 的方式經營互動式網站平台，幫助懶得走路的人跟想賺小錢的人。" />
     <!-- Latest compiled and minified CSS -->
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="app.plugin.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.plugin.css'%}"/>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -24,7 +26,7 @@
             <li><a href="bootstrap_signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="bootstrap_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
-        <img src="img/logo2.png" height="300" class="img-responsive center-block">
+        <img src="{% static 'img/logo2.png'%}" height="300" class="img-responsive center-block">
         <br>
     </div>
     <nav class="navbar navbar-inverse  " role="navigation">
@@ -35,26 +37,26 @@
                 <div class="col-md-10 col-xs-12">
                     <ul class="nav navbar-nav ">
                         <li>
-                            <img src="img/logo.png" height="60">
+                            <img src="{% static 'img/logo.png'%}" height="60">
                         </li>
                         <li style="width: 40px">
                             &nbsp;
                         </li>
                         <li class="current_page_item">
-                            <a href="bootstrap_index.html" accesskey="1" title=""><img src="img/target.png ">首頁</a>
+                            <a href="index" accesskey="1" title=""><img src = "{% static 'img/target.png'%}" alt = "test"/>首頁</a>
                         </li>
                         <li>
-                            <a href="bootstrap_center.html" accesskey="2" title=""><img src="img/membership.png">會員中心
+                            <a href="center" accesskey="2" title=""><img src="{% static 'img/membership.png'%}"/>會員中心
                             </a>
                         </li>
                         <li>
-                            <a href="bootstrap_deal.html" accesskey="3" title=""><img src="img/map.png">交易專區</a>
+                            <a href="deal" accesskey="3" title=""><img src="{% static 'img/map.png'%}">交易專區</a>
                         </li>
                         <li>
-                            <a href="bootstrap_dispute.html" accesskey="4" title=""><img src="img/center.png">客服中心</a>
+                            <a href="dispute" accesskey="4" title=""><img src="{% static 'img/center.png'%}">客服中心</a>
                         </li>
                         <li>
-                            <a href="bootstrap_advertisement.html" accesskey="5" title=""><img src="img/ad.png">刊登廣告</a>
+                            <a href="ad" accesskey="5" title=""><img src="{% static 'img/ad.png'%}">刊登廣告</a>
                         </li>
                     </ul>
                 </div>
@@ -70,13 +72,31 @@
     </div>
     主介面-->
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12" style="height: 50px">
+        <div class="container" style="height: 120px ">
+            <div class="row">
+                <div class="col-sm-12" style="height: 20px"></div>
+                <div id="bor" class="col-sm-4 col-xs-12">
+                    <h2><small><span class="glyphicon glyphicon-warning-sign"></span>登入LazyHelp並提出交易糾紛，填妥相關資訊通知賣家。</small></h2>
+                </div>
+                <div id="bor" class="col-sm-4 col-xs-12">
+                    <h2><small><span class="glyphicon glyphicon-warning-sign"></span>試圖直接和賣家溝通，以解決問題。</small></h2>
+                </div>
+                <div id="bor" class="col-sm-4 col-xs-12">
+                    <h2><small><span class="glyphicon glyphicon-warning-sign"></span>如果問題解決，結束糾紛程序，如果沒有解決，LazyHelp將會介入</small></h2>
+                </div>
             </div>
-            <div class="col-sm-12" >
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231391.29983050158!2d121.3662919556861!3d25.017471907999813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac72bce20a99%3A0x3f6a35cedd0ac2e0!2z5Y-w54Gj5paw5YyX5biC5Y-w5YyX!5e0!3m2!1szh-TW!2stw!4v1464507816738" width="600" height="650" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block"></iframe>
-            </div>
-            <div class="col-sm-12" style="height: 100px">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" style="height: 20px"></div>
+                <div id="bor" class="col-sm-6 col-xs-12">
+                    <img src="{% static 'img/help1.png'%}" width="200px" height="200px" class="img-responsive center-block">
+                    <a href="bootstrap_dispute_help.html"><h2>參考的作法<span class="glyphicon glyphicon-ok-circle"></span> </h2></a>
+                </div>
+                <div id="bor" class="col-sm-6 col-xs-12">
+                    <img src="{% static 'img/help2.png'%}" width="200px" height="200px" class="img-responsive center-block">
+                    <a href="http://www.cpc.ey.gov.tw/"><h2>提供的協助<span class="glyphicon glyphicon-thumbs-up"></span> </h2></a>
+                </div>
             </div>
         </div>
         <div id="main" class="container">&nbsp;
@@ -85,43 +105,45 @@
             <!--創作團隊-->
             <h3>Lazy客服專線：0987-654-321，工作時段：周一至周日 9:00-22:00提供各類活動諮詢</h3>
         </div>
-    </div <!--聯絡方式-->
+        <div class="col-sm-12" style="height: 30px">
+            </div>
+    </div>
     <!--創作團隊-->
     <div id="footer1" class="container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12" style="height: 70px"></div>
-                <div class="col-sm-5"> <img src="img/logo3.png" class="img-responsive center-block"></div>
+                <div class="col-sm-5"> <img src="{% static 'img/logo3.png'%}" class="img-responsive center-block"></div>
                 <div id="text" class="col-sm-3">
                     <ul class="nav nav-stacked">
                         <li class="current_page_item">
-                            <a href="bootstrap_index.html">回到首頁</a>
+                            <a href="index">回到首頁</a>
                         </li>
                         <li>
-                            <a href="bootstrap_center.html">會員中心
+                            <a href="center">會員中心
                             </a>
                         </li>
                         <li>
-                            <a href="bootstrap_deal.html">交易專區</a>
+                            <a href="deal">交易專區</a>
                         </li>
                         <li>
-                            <a href="bootstrap_dispute.html">客服中心</a>
+                            <a href="dispute">客服中心</a>
                         </li>
                     </ul>
                 </div>
                 <div id="text" class="col-sm-3">
                     <ul class="nav nav-stacked">
                         <li>
-                            <a href="bootstrap_advertisement.html">刊登廣告</a>
+                            <a href="ad">刊登廣告</a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/lazyhelpwebsite">粉絲專頁</a>
                         </li>
                         <li>
-                            <a href="bootstrap_deal_build.html">我要建單</a>
+                            <a href="deal_build">我要建單</a>
                         </li>
                         <li>
-                            <a href="bootstrap_deal.htmlhttps://www.facebook.com/lazyhelpwebsite">我要接單</a>
+                            <a href="deal">我要接單</a>
                         </li>
                     </ul>
                 </div>
