@@ -47,18 +47,18 @@
     }
     .navbar {}
     
-    .navbar ul {
-        margin: 0;
-        padding: 10px 0px 10px 0px;
+    .navbar-nav ul {
+        margin: 0px;
+        padding: 0px ;
         list-style: none;
-        font-size: 18px;
         text-align: center;
         line-height: normal;
         text-align: center;
     }
     
-    .navbar li {
-       
+    .navbar-nav li {
+        margin:0px;
+        padding:0px;
     }
     
     .navbar li a {
@@ -66,11 +66,10 @@
         border-style: solid;
         border-width: 0px 1px;
         display: block;
-        padding: 15px 10px 15px 10px;
+        padding: 10px 0px 10px 0px;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 3px;
-        font-weight: 300;
     }
     a{
         color:black;
@@ -136,7 +135,6 @@
         text-decoration: none;
         color: gray;
     }
-    
     .carousel-caption h3 {
         color: #fff !important;
     }
@@ -152,8 +150,8 @@
     
     #bor {
         border-style: solid;
-        border-width: 5px 2.5px 5px 2.5px;
-        height: 280px;
+        border-width: 2.5px 2.5px 2.5px 2.5px;
+        height: 160px;
     }
     
     #bor a {
@@ -179,8 +177,17 @@
         border-style: solid;
         border-width: 0px 5px 0px 0px;
     }
-    
+    #bor5{
+         border-style: solid;
+        border-width: 0px 5px 5px 0px;
+    }
+    #bor6{
+         border-style: solid;
+        border-width: 0px 0px 5px 0px;
+    }
 
-    
+    #aw a {
+        color: white;
+    }
     
     </style>
