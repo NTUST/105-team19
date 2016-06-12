@@ -87,17 +87,17 @@
             </div>
             <div class="col-sm-4">
                 <div class="well">
-                    <form class="form-horizontal" role="form">
+                    <form class="form-horizontal" role="form" method="POST" action="">
                         <div class="form-group">
                             <div class="col-sm-3 ">
-                                <h3>帳號</h3></div>
+                                <h3>帳號</h3></div>{% csrf_token %}
                             <div class="col-sm-12">
-                                <input class="form-control" id="dfocusedInput" type="text" placeholder="請輸入手機號碼或E-mail帳號">
+                                <input class="form-control" id="account" name="account" type="text" placeholder="請輸入手機號碼或E-mail帳號" value="{{account}}">
                             </div>
                             <div class="col-sm-3 ">
                                 <h3>密碼</h3></div>
                             <div class="col-sm-12">
-                                <input class="form-control" id="dfocusedInput" type="text" placeholder="請輸入密碼..........">
+                                <input class="form-control" id="password" name="password" type="text" placeholder="請輸入密碼.........." value="{{password}}">
                             </div>
                             <div class="col-sm-12" style="height: 30px">
                             </div>
