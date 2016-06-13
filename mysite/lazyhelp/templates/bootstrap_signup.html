@@ -87,7 +87,8 @@
             </div>
             <div class="col-sm-4">
                 <div class="well">
-                    <form class="form-horizontal" role="form" method="POST" action="">{% csrf_token %}
+                    <form class="form-horizontal" role="form" method="POST" action="">
+                    {% csrf_token %}
                         <div class="form-group">
                             <div class="col-sm-3 ">
                                 <h3>信箱</h3></div>
@@ -181,5 +182,6 @@
         <div id="footer2" class="col-sm-12">
             <h3>&copy; 信箱：B10309009@mail.ntust.edu.tw 作者：台灣科技大學四資管二張力仁</h2> </div>
     </div>
+    <script>{{res|safe}}</script>
         </body>
         </html>

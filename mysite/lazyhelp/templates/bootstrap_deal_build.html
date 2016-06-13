@@ -72,59 +72,62 @@
     主介面-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" style="height: 50px">
+            <div class="col-sm-12" style="height: 50px;text-align:left;">
+                <h2>建立訂單</h2>
             </div>
             <div class="col-sm-12" style="height: 500px">
                 <div class="well">
-                    <form class="form-horizontal" role="form" method="POST" action="">{% csrf_token %}
+                    <form class="form-horizontal" role="form" method="POST" action="">
+                    {% csrf_token %}
                         <div class="form-group">
-                            <label class="col-sm-1 col-xs-12 control-label">標題</label>
-                            <div class="col-sm-5">
-                                <input class="form-control" id="title" type="text" value="Click to focus...">
-                            </div>
-                            <label class="col-sm-2 col-xs-2 control-label">地點：</label>
-                            <div class="col-sm-2 col-xs-5">
-                                <select class="form-control" id="address1">
-                                    <option value="台北市">台北市</option>
-                                    <option value="台中市">台中市</option>
-                                    <option value="台南市">台南市</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2 col-xs-5">
-                                <select class="form-control" id="address2">
-                                    <option value="大安區">大安區</option>
-                                    <option value="中正區">中正區</option>
-                                    <option value="大同區">大同區</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword" class="col-sm-1 control-label">內容</label>
-                            <div class="col-sm-5">
-                                <textarea name="context" id="context" cols="30" rows="10" placeholder="Input here......."></textarea>
+                            <div class="col-sm-6">
+                                <div class="col-sm-2 col-xs-12 ">
+                                     <label class="control-label">標題</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="title" name="title" type="text" placeholder="Click to focus...">
+                                </div>
+                                <div class="col-sm-12 col-xs-12" style="height: 20px">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="context" class="control-label">內容</label>
+                                </div>
+                                
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" name="context" id="context" name="context" cols="30" rows="10" placeholder="Input here......."></textarea>
+                                </div>
                                 <div class="col-sm-12 col-xs-12" style="height: 40px">
                                 </div>
-                                <div class="col-sm-9">
-                                    <label for="inputPassword" class="col-sm-3 col-xs-2 control-label">電話</label>
-                                    <div class="col-sm-9 col-xs-6">
-                                        <input class="form-control" id="phone" type="text" placeholder="0936285634">
-                                    </div>
-                                </div>
-                                <button class="col-sm-3 col-xs-4">送出</button>
+                                
                             </div>
-                            <label for="inputPassword" class="col-sm-1  col-xs-2 control-label">圖片</label>
-                            <button class="col-sm-1">上傳</button>
-                            <label for="inputPassword" class="col-sm-3 control-label">最多上傳4張圖片，格式：PNG/JPG/GIF </label>
-                            <div class="col-sm-6  col-xs-12">
-                                <div class="col-sm-12" style="height: 20px">
+                            <div class="col-sm-6">
+                                <div class="col-sm-2">
+                                    <label for="cash">獎金(NT)</label>
                                 </div>
-                                <div class="col-sm-9  col-xs-9">
-                                    <input class="form-control" id="focusedInput" type="text" value="地址">
+                                <div class="col-sm-10 col-xs-6">
+                                    <input class="form-control" type="text" id="cash" name="cash">
                                 </div>
-                                <button class="col-sm-3  col-xs-3">送出</button>
-                                <div class="col-sm-12" style="height: 20px">
+                                <div class="col-sm-12 col-xs-12" style="height: 20px">
                                 </div>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14462.484083379402!2d121.50845094999998!3d25.01299045!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1463201268254" width="500" height="200" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block"></iframe>
+                                <div class="col-sm-2  col-xs-2">
+                                    <label for="deadline" class="control-label">Deadline</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="date" id="deadline" name="deadline">
+                                </div>
+                                <div class="col-sm-12 col-xs-12" style="height: 20px">
+                                </div>
+                                <div class="col-sm-2  col-xs-12">
+                                        <label for="">地址</label>
+                                </div>
+                                <div class="col-sm-10  col-xs-9">
+                                    <input class="form-control" id="address" name="address" type="text" placeholder="地址">
+                                </div>
+                                <div class="col-sm-12 col-xs-12" style="height: 20px">
+                                </div>
+                                <div class="col-sm-2 col-sm-offset-10" style="height: 20px">
+                                    <input class="button" type="submit" value="Submit">
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -184,5 +187,6 @@
         <div id="footer2" class="col-sm-12">
             <h3>&copy; 信箱：B10309009@mail.ntust.edu.tw 作者：台灣科技大學四資管二張力仁</h2> </div>
     </div>
+    <script>{{res|safe}}</script>
         </body>
         </html>
