@@ -25,6 +25,7 @@ class Order(models.Model):
 	deadline = models.DateField()
 	point_to_b = models.IntegerField()
 	point_to_s = models.IntegerField()
+	bulid_date = models.DateField()
 	status = models.SmallIntegerField()
 
         def __unicode__(self):

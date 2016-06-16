@@ -12,19 +12,20 @@
     <meta name="description" content="以 C2C 的方式經營互動式網站平台，幫助懶得走路的人跟想賺小錢的人。" />
     <!-- Latest compiled and minified CSS -->
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/app.plugin.css'%}"/>
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-3.0.0.min.js'%}"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
 </head>
 
 <body>
     <div id="top" class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="bootstrap_signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="bootstrap_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
         <img src="{% static 'img/logo2.png'%}" height="300" class="img-responsive center-block">
         <br>
@@ -78,51 +79,51 @@
                     <h2>使用者資料</h2>
                     <div class="well">
                         <img src="{% static 'img/lazyman2.png'%}" class="img-circle" alt="Cinque Terre" width="100" height="100">
-                        <br> 姓名：{{User.uname}}
-                        <br> 積分：{{User.point}}
-                        <br>已發佈任務：{{User.task_push_count}}
-                        <br>已完成任務：{{User.task_get_count}}
+                        <br> <span>姓名：{{ resp.username }}</span>
+                        <br> <span>積分：{{ resp.point }}</span>
+                        <br><span>已發佈任務：{{ resp.b_task }}</span>
+                        <br><span>已完成任務：{{ resp.d_task }}</span>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4  col-xs-12">
                 <div class="panel-group">
-                { % for task in tasks_push %}
+                {% for task in resp.b_tasklist %}
                     <div class="panel panel-default  ">
                         
                         <div class="panel-heading"><span class="label label-default">已發布的任務</span></div>
                         <div class="panel-body">
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-warning">{{task.name}}</li>
-                                <li class="list-group-item"><span class="badge">!</span>時間：{{task.time}}</li>
-                                <li class="list-group-item"><span class="badge">$</span>酬勞：$NT{{task.money}}</li>
-                                <li class="list-group-item"><span class="badge">電話</span>(886){{task.phone}}</li>
-                                <li class="list-group-item"><span class="badge">地點</span>(台灣){{task.location}}</li>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.9048631384222!2d121.53971647918854!3d25.01304371432367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa21ad6ecda9%3A0xaafddb5ed18525b6!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5ZyL6Zqb5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1464498094200" width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block">></iframe>
+                                <li class="list-group-item list-group-item-warning">{{task.title}}</li>
+                                <li class="list-group-item"><span class="badge">!</span>時間：{{task.deadline}}</li>
+                                <li class="list-group-item"><span class="badge">$</span>酬勞：NT{{task.price}}</li>
+                                <li class="list-group-item"><span class="badge">電話</span>(886){{task.saler.account}}</li>
+                                <li class="list-group-item"><span class="badge">地點</span>(台灣){{task.address}}</li>
+                                <iframe src={{resp.map|add:task.address}} width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block">></iframe>
                             </ul>
                         </div>
                        
                     </div>
-                 { % endfor %}    
+                 {% endfor %}    
                 </div>
             </div>
             <div class="col-sm-4  col-xs-12">
                 <div class="panel-group">
-                { % for task in tasks_get %}
+                {% for task in resp.a_tasklist %}
                     <div class="panel panel-default">
                         <div class="panel-heading"><span class="label label-default">已接受的任務</span></div>
                         <div class="panel-body">
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-danger">{{task.name}}</li>
-                                <li class="list-group-item"><span class="badge">!</span>時間：{{task.time}}</li>
-                                <li class="list-group-item"><span class="badge">$</span>酬勞：$NT{{task.money}}</li>
-                                <li class="list-group-item"><span class="badge">電話</span>(886){{task.phone}}</li>
-                                <li class="list-group-item"><span class="badge">地點</span>(台灣){{task.location}}</li>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.9048631384222!2d121.53971647918854!3d25.01304371432367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa21ad6ecda9%3A0xaafddb5ed18525b6!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5ZyL6Zqb5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1464498094200" width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block">></iframe>
+                                <li class="list-group-item list-group-item-warning">{{task.title}}</li>
+                                <li class="list-group-item"><span class="badge">!</span>時間：{{task.deadline}}</li>
+                                <li class="list-group-item"><span class="badge">$</span>酬勞：NT{{task.price}}</li>
+                                <li class="list-group-item"><span class="badge">電話</span>(886){{task.saler.account}}</li>
+                                <li class="list-group-item"><span class="badge">地點</span>(台灣){{task.address}}</li>
+                                <iframe src={{resp.map|add:task.address}} width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block">></iframe>
                             </ul>
                         </div>
                     </div>
-                 { % endfor %}       
+                 {% endfor %}       
                 </div>
             </div>
             <div class="col-sm-12" style="height: 30px">
@@ -174,5 +175,6 @@
         <div id="footer2" class="col-sm-12">
             <h3>&copy; 信箱：B10309009@mail.ntust.edu.tw 作者：台灣科技大學四資管二張力仁</h2> </div>
     </div>
+
         </body>
         </html>

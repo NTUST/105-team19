@@ -12,19 +12,20 @@
     <meta name="description" content="以 C2C 的方式經營互動式網站平台，幫助懶得走路的人跟想賺小錢的人。" />
     <!-- Latest compiled and minified CSS -->
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/app.plugin.css'%}"/>
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-3.0.0.min.js'%}"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
 </head>
 
 <body>
     <div id="top" class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="bootstrap_signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="bootstrap_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
         <img src="{% static 'img/logo2.png'%}" height="300" class="img-responsive center-block">
         <br>
@@ -84,7 +85,7 @@
                     <h3>地圖找單</h3></a>
             </div>
             <div id="" class="col-sm-4 col-xs-4">
-                <a href="advertisement"><img src="{% static 'img/toolman2.png'%}" width="200px" height="200px" class="img-responsive center-block">
+                <a href="ad"><img src="{% static 'img/toolman2.png'%}" width="200px" height="200px" class="img-responsive center-block">
                     <h3>刊登廣告</h3></a>
             </div>
         </div>
