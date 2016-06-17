@@ -85,8 +85,8 @@
                 </form>
             </div>
             
-                {% for task in deal %}
-                <div class="col-sm-4">
+            {% for task in deal %}
+            <div class="col-sm-4">
                 <div class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading"><span class="label label-default">任務</span></div>
@@ -100,10 +100,10 @@
                                 <iframe src={{maps|add:task.address}} width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="img-responsive center-block">></iframe>
                             </ul>
                         </div>
-                    </div>
-                 {% endfor %}       
+                    </div>      
                 </div>
             </div>
+            {% endfor %} 
         </div>
         <div id="main" class="container">&nbsp;
             <br> &nbsp;

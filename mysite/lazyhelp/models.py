@@ -21,7 +21,7 @@ class Order(models.Model):
 	buyer = models.ForeignKey(User, related_name="uid_b")
 	saler = models.ForeignKey(User, related_name="uid_s")
 	price = models.DecimalField(max_digits = 10, decimal_places = 0)
-	pic1 = models.ImageField(height_field = 500,width_field =500)
+	pic1 = models.ImageField()
 	deadline = models.DateField()
 	point_to_b = models.IntegerField()
 	point_to_s = models.IntegerField()
